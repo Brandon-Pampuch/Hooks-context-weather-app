@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react'
 import { useState, useEffect } from 'react'
-import StateContext from '../pages/Landing'
+import StateContext from '../App'
 
 
 
@@ -13,8 +13,7 @@ function Minnesota () {
 
     return ( 
         <div>
-        <h1>{weather}</h1>
-        
+            <h1>{weather}</h1>
         </div>
      );
 }
