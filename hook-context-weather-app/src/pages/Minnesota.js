@@ -8,12 +8,13 @@ import StateContext from '../App'
 function Minnesota () {
     const [weather, setWeather] = useContext(StateContext)
     console.log(weather)
+ 
 
 
 
     return ( 
         <div>
-            <h1>{weather}</h1>
+            <h1>ok</h1>
         </div>
      );
 }
