@@ -7,7 +7,7 @@ import StateContext from '../App'
 
 function Minnesota () {
     const [weather, setWeather] = useContext(StateContext)
-    console.log(weather)
+    console.log("Minnesota:", weather)
  
 
 

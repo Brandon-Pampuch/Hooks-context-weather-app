@@ -30,9 +30,10 @@ function App() {
   //     fetchData()
   // },[])
 
-console.log(weather)
+console.log("app:", weather)
 
   return (
+
     <StateContext.Provider value={[weather, setWeather]}>
       <Minnesota></Minnesota>
       {/* <Router>
