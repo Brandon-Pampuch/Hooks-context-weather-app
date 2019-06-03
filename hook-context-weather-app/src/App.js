@@ -8,14 +8,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { useState, useEffect} from 'react'
 
-import "./App.css";
 
 export const StateContext = React.createContext()
 
 function App() {
 
-  const [weather, setWeather]=useState("apple")
+  const [weather, setWeather]=useState("")
+  const [zip, setZip]=useState("")
 
+  //needs custom hooks to re-use this function // Dustin video on twitch  
   useEffect(() =>{
       const fetchData =  () =>{ 
       axios.get('http://api.openweathermap.org/data/2.5/weather?zip=37174,us&appid=c1b91878d87bd4516034e993aa14f682')
@@ -34,8 +35,7 @@ console.log("app:", weather)
 
   return (
 
-    <StateContext.Provider value={[weather, setWeather]}>
- 
+    <StateContext.Provider value={[weather, setWeather, zip, setZip]}>
       <Router>
           <Route exact path={"/"} component={Landing}></Route>
           <Route exact path="/Tennesse" component={Tennesse}></Route>
